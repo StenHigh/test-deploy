@@ -1,9 +1,10 @@
 name: DI
 on:
-  pull_request_review:
-    types: [submitted]
-    branches: [ "dev" ]
-
+  pull_request:
+    branches:
+      - dev
+    types:
+      - closed
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 jobs:
