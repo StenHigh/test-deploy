@@ -1,3 +1,3 @@
 #! /bin/bash
 cd /home/sh/project && pwd
-#test pr for master
+#test pr for dev
