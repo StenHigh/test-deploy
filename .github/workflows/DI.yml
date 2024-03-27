@@ -1,7 +1,5 @@
-name: CI
+name: DI
 on:
-  push:
-    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
@@ -9,14 +7,16 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    name: Build
+    name: Deploy and build
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using ssh key
+    - name: build dev app
       uses: appleboy/ssh-action@v1.0.3
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
-        script: whoami
+        script: |
+          cd
+          ls -la
