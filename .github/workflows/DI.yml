@@ -20,5 +20,5 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          cd
+          cd /home/sh/projects
           ls -la
